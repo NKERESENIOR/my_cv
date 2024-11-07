@@ -6,7 +6,6 @@
     <meta name="description" content="Information Technology Professional Portfolio">
     <title>Nicholas Nkere - IT Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Include Font Awesome for Social Media Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
@@ -18,34 +17,49 @@
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: #34495e;
             color: #fff;
             text-align: center;
-            padding: 50px 0;
+            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
             font-size: 3rem;
+            font-weight: 700;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 300;
         }
 
         header a {
-            color: #fff; /* Change header link color to white */
+            color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         header a:hover {
-            text-decoration: underline;
+            background-color: #3498db;
         }
 
         section {
-            padding: 40px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
         }
 
         .container {
@@ -55,54 +69,85 @@
 
         .skills, .projects {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-wrap: wrap;
         }
 
         .skill, .project {
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin: 20px;
             padding: 20px;
             text-align: center;
             width: 30%;
             box-sizing: border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover, .project:hover {
+            transform: translateY(-10px);
         }
 
         .skill h3, .project h3 {
             margin: 10px 0;
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .skill p, .project p {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
         }
 
         .contact-info {
             text-align: center;
             background-color: #ecf0f1;
-            padding: 30px;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
         }
 
         .contact-info a {
             color: #2c3e50;
             text-decoration: none;
+            font-weight: bold;
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: #34495e;
             color: #fff;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px;
+            position: relative;
         }
 
         footer a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
+            font-size: 1.1rem;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
 
-        /* Social Media Icon Styles */
         .social-icons {
             margin-top: 20px;
         }
@@ -112,6 +157,7 @@
             color: #3498db;
             margin: 0 15px;
             cursor: pointer;
+            transition: color 0.3s ease;
         }
 
         .social-icons i:hover {
@@ -138,6 +184,40 @@
                 font-size: 1rem;
             }
         }
+
+        /* Contact Form Styles */
+        form div {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        form button {
+            padding: 15px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #2980b9;
+        }
+
     </style>
 </head>
 <body>
@@ -160,7 +240,7 @@
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2 class="container">Skills</h2>
+        <h2>Skills</h2>
         <div class="skills container">
             <div class="skill">
                 <h3>Programming</h3>
@@ -179,7 +259,7 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="container">Projects</h2>
+        <h2>Projects</h2>
         <div class="projects container">
             <div class="project">
                 <h3>Project 1</h3>
@@ -203,6 +283,27 @@
     <section id="contact" class="contact-info">
         <h2>Contact Me</h2>
         <p>If you would like to collaborate or discuss opportunities, feel free to reach out.</p>
+
+        <form id="contact-form" action="mailto:nicholas@gmail.com" method="POST" enctype="text/plain">
+            <div>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
         <p>Email: <a href="mailto:nicholas@gmail.com">nicholas@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
 
@@ -211,7 +312,6 @@
             <a href="https://wa.me/+254713885033" target="_blank">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            
             <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
